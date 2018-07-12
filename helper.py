@@ -21,14 +21,14 @@ def indivisual_station_usage(filepath):
                 dict1[student_id] = {}
             if station_id not in dict1[student_id]:
                 dict1[student_id][station_id] = time_stamp
-            if (student_id in dict1) and (station_id in dict1[student_id]):
+            else:
                 dict1[student_id][station_id] = dict1[student_id][station_id] + time_stamp
 
             if station_id not in dict2.keys():
                 dict2[station_id] = {}
             if student_id not in dict2[station_id]:
                 dict2[station_id][student_id] = time_stamp
-            if (station_id in dict2) and (student_id in dict2[station_id]):
+            else:
                 dict2[station_id][student_id] = dict2[station_id][student_id] + time_stamp
     return dict1, dict2
 
